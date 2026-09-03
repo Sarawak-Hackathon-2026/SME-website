@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Contact &amp; Visit — My Little House Play School, Bintulu</title>
-<meta name="description" content="Visit or ask about a place at My Little House Play School, No. 40 Grand Height, Jalan Johari Sunam, 87000 Bintulu, Sarawak. WhatsApp or call Ms Siti at +60 14-887 9930, Monday to Friday.">
+<meta name="description" content="Visit or ask about a place at My Little House Play School, No. 40 Grand Height, Jalan Johari Sunam, 97000 Bintulu, Sarawak. WhatsApp or call Ms Siti at +60 14-887 9930, Monday to Friday.">
 <link rel="canonical" href="https://mylittlehouseplayschool.my/contact.html">
 <meta name="robots" content="index, follow, max-image-preview:large">
 <meta name="author" content="My Little House Play School">
@@ -16,7 +16,7 @@
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="My Little House Play School">
 <meta property="og:title" content="Contact &amp; Visit — My Little House Play School, Bintulu">
-<meta property="og:description" content="Visit or ask about a place at My Little House Play School, No. 40 Grand Height, Jalan Johari Sunam, 87000 Bintulu, Sarawak. WhatsApp or call Ms Siti at +60 14-887 9930, Monday to Friday.">
+<meta property="og:description" content="Visit or ask about a place at My Little House Play School, No. 40 Grand Height, Jalan Johari Sunam, 97000 Bintulu, Sarawak. WhatsApp or call Ms Siti at +60 14-887 9930, Monday to Friday.">
 <meta property="og:url" content="https://mylittlehouseplayschool.my/contact.html">
 <meta property="og:image" content="https://mylittlehouseplayschool.my/assets/photos/exterior.jpg">
 <meta property="og:image:alt" content="Exterior of My Little House Play School Childcare Centre in Bintulu, Sarawak">
@@ -24,7 +24,7 @@
 <meta property="og:locale:alternate" content="ms_MY">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Contact &amp; Visit — My Little House Play School, Bintulu">
-<meta name="twitter:description" content="Visit or ask about a place at My Little House Play School, No. 40 Grand Height, Jalan Johari Sunam, 87000 Bintulu, Sarawak. WhatsApp or call Ms Siti at +60 14-887 9930, Monday to Friday.">
+<meta name="twitter:description" content="Visit or ask about a place at My Little House Play School, No. 40 Grand Height, Jalan Johari Sunam, 97000 Bintulu, Sarawak. WhatsApp or call Ms Siti at +60 14-887 9930, Monday to Friday.">
 <meta name="twitter:image" content="https://mylittlehouseplayschool.my/assets/photos/exterior.jpg">
 <link rel="icon" href="assets/logo.png">
 <link rel="apple-touch-icon" href="assets/logo.png">
@@ -43,12 +43,18 @@
       "@id": "https://mylittlehouseplayschool.my/#business",
       "name": "My Little House Play School",
       "alternateName": "My Little House Childcare Centre",
+      "legalName": "My Little House Playschool Childcare Centre (Taska Rumah Kecilku)",
+      "foundingDate": "2011",
+      "founder": {
+        "@type": "Person",
+        "name": "Siti Fatihah Binti Mohamad",
+        "jobTitle": "Principal & Founder"
+      },
       "description": "A warm, play-based childcare centre in Bintulu, Sarawak for children aged 3 months to 9 years, offering infant daycare, toddler playschool, preschool, transit care and an inclusive early-intervention programme.",
       "url": "https://mylittlehouseplayschool.my/",
       "logo": "https://mylittlehouseplayschool.my/assets/logo.png",
       "image": "https://mylittlehouseplayschool.my/assets/photos/exterior.jpg",
       "telephone": "+60-14-887-9930",
-      "email": "hello@mylittlehouseplayschool.my",
       "priceRange": "$$",
       "currenciesAccepted": "MYR",
       "address": {
@@ -56,7 +62,7 @@
         "streetAddress": "No. 40, Grand Height, Jalan Johari Sunam",
         "addressLocality": "Bintulu",
         "addressRegion": "Sarawak",
-        "postalCode": "87000",
+        "postalCode": "97000",
         "addressCountry": "MY"
       },
       "geo": {
@@ -114,7 +120,7 @@
       "@id": "https://mylittlehouseplayschool.my/contact.html#webpage",
       "url": "https://mylittlehouseplayschool.my/contact.html",
       "name": "Contact & Visit — My Little House Play School, Bintulu",
-      "description": "Visit or ask about a place at My Little House Play School, No. 40 Grand Height, Jalan Johari Sunam, 87000 Bintulu, Sarawak. WhatsApp or call Ms Siti at +60 14-887 9930, Monday to Friday.",
+      "description": "Visit or ask about a place at My Little House Play School, No. 40 Grand Height, Jalan Johari Sunam, 97000 Bintulu, Sarawak. WhatsApp or call Ms Siti at +60 14-887 9930, Monday to Friday.",
       "isPartOf": {
         "@id": "https://mylittlehouseplayschool.my/#website"
       },
@@ -181,8 +187,9 @@
 <section class="section-cream" style="padding-top:0;">
   <div class="container grid grid-2" style="align-items:start;">
     <div class="card">
-      <h3 style="margin-bottom:18px;">Send us an enquiry</h3>
-      <form action="mailto:hello@mylittlehouseplayschool.my?subject=Enrollment%20Enquiry" method="POST" enctype="text/plain">
+      <h3 style="margin-bottom:6px;">Send us an enquiry</h3>
+      <p style="font-size:13.5px; opacity:0.75; margin-bottom:18px;">Fill this in and we'll open WhatsApp with your details ready to send to Ms Siti — the quickest way to reach us.</p>
+      <form id="enquiryForm">
         <div class="form-grid">
           <div>
             <label for="name">Parent / Guardian Name</label>
@@ -207,26 +214,21 @@
             <textarea id="message" name="Message" rows="4" placeholder="Tell us a bit about what you're looking for..."></textarea>
           </div>
           <div class="full">
-            <button type="submit" class="btn btn-primary" style="width:100%; justify-content:center;">Send Enquiry</button>
+            <button type="submit" class="btn btn-whatsapp" style="width:100%; justify-content:center;">Open in WhatsApp</button>
           </div>
         </div>
       </form>
-      <span class="badge-note">Placeholder form — connect this to a real form service (e.g. Jotform / Google Form) or backend before launch.</span>
     </div>
 
     <div>
       <div class="info-strip" style="margin-top:0; flex-direction:column; align-items:flex-start; gap:20px;">
         <div class="info-item" style="flex:0 0 auto;">
           <h4>Our Address</h4>
-          <p>No. 40, Grand Height, Jalan Johari Sunam, 87000 Bintulu, Sarawak</p>
+          <p>No. 40, Grand Height, Jalan Johari Sunam, 97000 Bintulu, Sarawak</p>
         </div>
         <div class="info-item" style="flex:0 0 auto;">
           <h4>Call / WhatsApp</h4>
           <p><a href="tel:+60148879930">+60 14-887 9930</a> — ask for Ms Siti</p>
-        </div>
-        <div class="info-item" style="flex:0 0 auto;">
-          <h4>Email</h4>
-          <p>hello@mylittlehouseplayschool.my</p>
         </div>
         <div class="info-item" style="flex:0 0 auto;">
           <h4>Opening Hours</h4>
@@ -240,7 +242,7 @@
           title="My Little House Play School location"
           width="100%" height="100%" style="border:0;"
           loading="lazy"
-          src="https://www.google.com/maps?q=No.+40,+Grand+Height,+Jalan+Johari+Sunam,+87000+Bintulu,+Sarawak&output=embed">
+          src="https://www.google.com/maps?q=No.+40,+Grand+Height,+Jalan+Johari+Sunam,+97000+Bintulu,+Sarawak&output=embed">
         </iframe>
       </div>
     </div>
@@ -287,7 +289,7 @@
       <div>
         <h5>Contact</h5>
         <ul>
-          <li>No. 40, Grand Height,<br>Jalan Johari Sunam,<br>87000 Bintulu, Sarawak</li>
+          <li>No. 40, Grand Height,<br>Jalan Johari Sunam,<br>97000 Bintulu, Sarawak</li>
           <li><a href="https://wa.me/60148879930?text=Hello%20My%20Little%20House%2C%20I%27d%20like%20to%20ask%20about%20a%20place%20for%20my%20child.">WhatsApp Ms Siti · +60 14-887 9930 →</a></li>
         </ul>
       </div>
@@ -309,6 +311,28 @@
       toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
       toggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
       toggle.innerHTML = open ? '&#10005;' : '&#9776;';
+    });
+  })();
+
+  (function () {
+    var form = document.getElementById('enquiryForm');
+    if (!form) return;
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var name = (document.getElementById('name').value || '').trim();
+      var phone = (document.getElementById('phone').value || '').trim();
+      var age = document.getElementById('child').value;
+      var msg = (document.getElementById('message').value || '').trim();
+      var lines = [
+        'Hello My Little House, I’d like to ask about a place for my child.',
+        '',
+        'Parent/Guardian: ' + name,
+        'Contact number: ' + phone,
+        'Child’s age group: ' + age
+      ];
+      if (msg) { lines.push('', msg); }
+      var url = 'https://wa.me/60148879930?text=' + encodeURIComponent(lines.join('\n'));
+      window.open(url, '_blank', 'noopener');
     });
   })();
 </script>

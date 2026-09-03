@@ -355,6 +355,16 @@ section { padding: 64px 0; }
 .card h4 { font-size: 17px; margin-bottom: 6px; color: var(--charcoal); font-family: var(--font-body); font-weight: 700; }
 .card p { font-size: 14px; opacity: 0.75; margin-bottom: 0; }
 
+.avatar {
+  width: 56px; height: 56px;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--font-display);
+  font-size: 20px;
+  color: #fff;
+  margin-bottom: 14px;
+}
+
 .tint-terracotta { background: var(--terracotta); color: #fff; }
 .tint-gold { background: var(--gold); color: var(--charcoal); }
 .tint-green { background: var(--green); color: #fff; }
