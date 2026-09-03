@@ -254,3 +254,38 @@ RM180, food half-year RM220; monthly RM400–RM650 depending on age and
 full/half day). Per §6 these were deliberately kept off the site. The FAQ
 answer on fees currently routes people to WhatsApp. Add the real table
 only on the owner's say-so.
+
+## 10. Changelog — Claude Code session, 2026-09-03 (evening)
+
+Source material from `Desktop/Sarawak-hackathon/Sarawak-hackathon.zip`
+(SSM cert, trade licence, signboard photo, Canva "Our Team" collages)
+was reviewed. Confirmed: phone **+60 14-887 9930** (signboard + licence),
+registered name **My Little House Playschool Childcare Centre (Taska
+Rumah Kecilku)**, operating since **2011**. Corrected: postcode
+**87000 → 97000** across all files (Bintulu is 97000; 87000 was wrong).
+Street address still unconfirmed — cert, licence and Canva site disagree.
+
+1. **Placeholders removed from visible content.** The `badge-note`
+   "Placeholder…" boxes on `about.html` (Health & Safety), `programs.html`
+   (schedule, fees) and `contact.html` (form) are gone. `gallery.html`
+   owner-facing "add your Instagram link" copy rewritten for visitors.
+2. **About page — real people.** New founder feature (Puan Siti Fatihah
+   Binti Mohamad, ECE degree, 22 yrs since 2004) with a cropped photo
+   (`assets/team/founder.jpg`). New "Our team" section: co-founder Encik
+   Sulaiman Bin Suhaili + 4 named teachers with real credentials, as
+   monogram cards (`.avatar` in `styles.css`). Health & Safety rewritten
+   with evidenced facts only: 1:3 infant ratio, smoke-free premises,
+   on-site first-aid kit, documented sick-child policy. CCTV / "daily
+   health checks" claims dropped (not evidenced).
+3. **Contact form works.** No backend — on submit it composes a
+   pre-filled `wa.me` message to Ms Siti and opens it. Placeholder email
+   `hello@…` removed from the form, the info panel and all JSON-LD.
+4. **CTA unified** to "Book a Visit" (nav, hero-end, footer). The second
+   desktop nav button ("Enroll Now" / "Contact") was removed.
+5. **Housekeeping.** Deleted an accidental nested duplicate copy of the
+   whole site. Added `README.md` and `.nojekyll` (GitHub Pages).
+6. JSON-LD business node gains `legalName`, `foundingDate`, `founder`.
+
+Still placeholder: the `mylittlehouseplayschool.my` domain in canonical /
+OG / sitemap URLs, the approximate geo coordinates, the street address,
+operating hours, and fees.
