@@ -42,6 +42,7 @@ body {
   color: var(--charcoal);
   background: var(--cream);
   line-height: 1.6;
+  overflow-x: clip; /* guard against any stray horizontal scroll on small screens */
 }
 
 img { max-width: 100%; display: block; }
@@ -62,9 +63,9 @@ h1, h2, h3, .display {
   letter-spacing: 0.01em;
 }
 
-h1 { font-size: clamp(32px, 5vw, 54px); }
-h2 { font-size: clamp(24px, 3.4vw, 36px); }
-h3 { font-size: clamp(18px, 2.2vw, 22px); }
+h1 { font-size: clamp(27px, 7.4vw, 54px); overflow-wrap: break-word; }
+h2 { font-size: clamp(23px, 3.4vw, 36px); overflow-wrap: break-word; }
+h3 { font-size: clamp(18px, 2.2vw, 22px); overflow-wrap: break-word; }
 
 p { margin: 0 0 16px; }
 
@@ -577,4 +578,33 @@ footer.site-footer {
   border-radius: 10px;
   padding: 10px 14px;
   margin-top: 10px;
+}
+
+/* ---------- Daily schedule table ---------- */
+.day-schedule {
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  row-gap: 14px;
+  font-size: 14.5px;
+}
+
+/* ---------- Small-screen tuning ---------- */
+@media (max-width: 720px) {
+  .info-strip { margin-top: 24px; }
+}
+@media (max-width: 560px) {
+  section { padding: 48px 0; }
+  .hero { padding: 40px 0; }
+  .section-head { margin-bottom: 30px; }
+  .card { padding: 22px; }
+}
+@media (max-width: 440px) {
+  .container { padding: 0 18px; }
+  .footer-grid { grid-template-columns: 1fr; gap: 24px; }
+  .footer-bottom { justify-content: center; text-align: center; }
+  .day-schedule { grid-template-columns: 1fr; row-gap: 3px; }
+  .day-schedule strong { margin-top: 12px; }
+  .hero-actions .btn,
+  .hero-actions { width: 100%; }
+  .hero-actions .btn { justify-content: center; }
 }

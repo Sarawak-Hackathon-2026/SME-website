@@ -53,9 +53,11 @@ Type: `ADLaM Display` (headings) + `Poppins` (body).
 - **Fees** — real figures exist but are intentionally kept off the site;
   the fees section routes people to WhatsApp.
 - **Map pin / geo coordinates** — currently an approximate Bintulu point.
-- **Deployed domain** — canonical / Open Graph / sitemap URLs use
-  `https://mylittlehouseplayschool.my` as a placeholder; search-and-replace
-  with the real URL across `*.html`, `robots.txt` and `sitemap.xml`.
+- **Deployed domain** — canonical / Open Graph / sitemap URLs currently
+  point at the GitHub Pages URL
+  (`https://sarawak-hackathon-2026.github.io/SME-website`). If the centre
+  gets its own domain, search-and-replace that string across `*.html`,
+  `robots.txt` and `sitemap.xml`.
 - **Transit-care age range** — site says 7–9 (from the centre's own page);
   the brief separately says 5–9.
 - Staff names, credentials and the founder photo come from the client's own

@@ -18,4 +18,4 @@ Allow: /
 User-agent: Applebot-Extended
 Allow: /
 
-Sitemap: https://mylittlehouseplayschool.my/sitemap.xml
+Sitemap: https://sarawak-hackathon-2026.github.io/SME-website/sitemap.xml
