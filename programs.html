@@ -25,7 +25,7 @@
     <div class="nav-cta">
       <a href="contact.html" class="btn btn-secondary" style="padding:10px 20px;">Contact</a>
       <a href="contact.html" class="btn btn-primary" style="padding:10px 20px;">Enroll Now</a>
-      <button class="nav-toggle" id="navToggle" aria-label="Menu">&#9776;</button>
+      <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-controls="navlinks" aria-expanded="false">&#9776;</button>
     </div>
   </nav>
 </header>
@@ -240,9 +240,17 @@
 </footer>
 
 <script>
-  document.getElementById('navToggle').addEventListener('click', function () {
-    document.getElementById('navlinks').classList.toggle('open');
-  });
+  (function () {
+    var toggle = document.getElementById('navToggle');
+    var links = document.getElementById('navlinks');
+    if (!toggle || !links) return;
+    toggle.addEventListener('click', function () {
+      var open = links.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+      toggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+      toggle.innerHTML = open ? '&#10005;' : '&#9776;';
+    });
+  })();
 </script>
 </body>
 </html>

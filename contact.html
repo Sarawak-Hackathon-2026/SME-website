@@ -24,7 +24,7 @@
     </ul>
     <div class="nav-cta">
       <a href="https://wa.me/60148879930?text=Hello%20My%20Little%20House%2C%20I%27d%20like%20to%20ask%20about%20a%20place%20for%20my%20child." class="btn btn-whatsapp" style="padding:10px 20px;">WhatsApp Us</a>
-      <button class="nav-toggle" id="navToggle" aria-label="Menu">&#9776;</button>
+      <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-controls="navlinks" aria-expanded="false">&#9776;</button>
     </div>
   </nav>
 </header>
@@ -157,9 +157,17 @@
 </footer>
 
 <script>
-  document.getElementById('navToggle').addEventListener('click', function () {
-    document.getElementById('navlinks').classList.toggle('open');
-  });
+  (function () {
+    var toggle = document.getElementById('navToggle');
+    var links = document.getElementById('navlinks');
+    if (!toggle || !links) return;
+    toggle.addEventListener('click', function () {
+      var open = links.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+      toggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+      toggle.innerHTML = open ? '&#10005;' : '&#9776;';
+    });
+  })();
 </script>
 </body>
 </html>
