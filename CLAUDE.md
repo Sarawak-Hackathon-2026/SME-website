@@ -247,13 +247,21 @@ deployed domain, or the OG image and canonical tags will point nowhere.
 The geo coordinates (`3.1701, 113.0417`) are an approximate Bintulu
 centre point — replace with the exact lat/long of No. 40 Grand Height.
 
-### Real fees are available but NOT on the site
+### Fees — now published on `programs.html` (2026-09-04, on user's say-so)
 
-The client's live Canva site lists actual fees (registration RM150, misc
-RM180, food half-year RM220; monthly RM400–RM650 depending on age and
-full/half day). Per §6 these were deliberately kept off the site. The FAQ
-answer on fees currently routes people to WhatsApp. Add the real table
-only on the owner's say-so.
+The client's live Canva site (pages 10–11) has a dedicated fee section.
+Verified figures, now shown in the "Fees" section on `programs.html`
+(`#fees`) and summarised in a new FAQ entry + `FAQPage` schema:
+
+- **Monthly:** ages 2 & below — full day RM650 / half day RM450;
+  ages 2 & above — full day RM595 / half day RM400.
+- **One-time on enrolment:** registration RM150 (first time only),
+  miscellaneous RM180, food RM220 per half-year.
+
+Still unconfirmed with the owner (copy hedges accordingly): whether "misc"
+is one-time or recurring, whether food is compulsory, how transit care and
+the inclusive programme are priced, and any deposit / sibling discount.
+Canva page 12 also has a 2026 school-holiday calendar (not yet used).
 
 ## 10. Changelog — Claude Code session, 2026-09-03 (evening)
 
