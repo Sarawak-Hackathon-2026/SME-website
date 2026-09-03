@@ -367,13 +367,12 @@ section { padding: 64px 0; }
 }
 
 .team-photo {
-  width: 88px; height: 88px;
+  width: 92px; height: 92px;
   border-radius: 50%;
   object-fit: cover;
-  background: var(--cream-soft);
-  border: 4px solid #fff;
-  box-shadow: 0 0 0 1px rgba(43, 36, 32, 0.08), 0 5px 16px rgba(43, 36, 32, 0.16);
-  margin-bottom: 15px;
+  background: #fff;
+  box-shadow: 0 0 0 3px var(--cream-soft), 0 6px 16px rgba(43, 36, 32, 0.15);
+  margin-bottom: 16px;
 }
 
 .tint-terracotta { background: var(--terracotta); color: #fff; }
