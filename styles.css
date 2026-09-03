@@ -134,12 +134,14 @@ header.site-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 12px;
   padding: 14px 0;
 }
 .brand {
   display: flex;
   align-items: center;
   gap: 10px;
+  min-width: 0;
 }
 .brand-mark {
   width: 50px;
@@ -186,16 +188,21 @@ header.site-header {
   color: var(--terracotta);
   border-bottom-color: var(--terracotta);
 }
-.nav-cta { display: flex; align-items: center; gap: 14px; }
+.nav-cta { display: flex; align-items: center; gap: 14px; flex-shrink: 0; }
 
 .nav-toggle {
   display: none;
   background: none;
   border: none;
   font-size: 24px;
+  line-height: 1;
+  padding: 4px 6px;
   cursor: pointer;
   color: var(--green);
 }
+
+/* CTA that only appears inside the mobile dropdown */
+.navlinks .nav-cta-mobile { display: none; }
 
 @media (max-width: 860px) {
   .navlinks {
@@ -205,32 +212,38 @@ header.site-header {
     flex-direction: column;
     align-items: stretch;
     gap: 0;
-    padding: 6px 24px 14px;
+    padding: 6px 20px 16px;
     border-bottom: 1px solid rgba(43,36,32,0.08);
     box-shadow: 0 14px 22px rgba(43,36,32,0.12);
     display: none;
   }
   .navlinks.open { display: flex; }
-  .navlinks a {
+  .navlinks a:not(.btn) {
     display: block;
     width: 100%;
     padding: 13px 2px;
     font-size: 15px;
     border-bottom: 1px solid rgba(43,36,32,0.07);
   }
-  .navlinks a:hover,
-  .navlinks a.active {
+  .navlinks a:not(.btn):hover,
+  .navlinks a:not(.btn).active {
     color: var(--terracotta);
     border-bottom-color: rgba(43,36,32,0.07);
   }
-  .navlinks li:last-child a { border-bottom: none; }
+  .navlinks .nav-cta-mobile {
+    display: block;
+    margin-top: 12px;
+  }
+  .navlinks .nav-cta-mobile .btn {
+    width: 100%;
+    justify-content: center;
+  }
   .nav-toggle { display: block; }
-  .nav-cta { gap: 8px; }
-  .nav-cta .btn-secondary { display: none; }
+
+  /* Desktop CTA buttons collapse into the hamburger menu on mobile/tablet */
+  .nav-cta .btn { display: none; }
 }
-@media (max-width: 480px) {
-  .nav-cta .btn-primary,
-  .nav-cta .btn-whatsapp { display: none; }
+@media (max-width: 380px) {
   .brand-name { font-size: 17px; }
 }
 
