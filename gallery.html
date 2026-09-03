@@ -41,46 +41,51 @@
 <section class="section-cream" style="padding-top:0;">
   <div class="container">
     <div class="section-head left">
-      <span class="eyebrow">In The Classroom</span>
-      <h2>Learning through play</h2>
+      <span class="eyebrow">Inside Our Home</span>
+      <h2>A look around My Little House</h2>
+      <p style="opacity:0.8; max-width:560px;">Real photos of our rooms and learning corners in Bintulu — the play kitchen, the reading nook, the sensory space, and the shelves the children reach themselves.</p>
     </div>
-    <div class="grid grid-4">
-      <div class="photo" style="background:var(--terracotta);">Story Time<span class="tag">Classroom</span></div>
-      <div class="photo" style="background:var(--gold); color:var(--charcoal);">Building Blocks<span class="tag" style="background:rgba(43,36,32,0.25);">Classroom</span></div>
-      <div class="photo" style="background:var(--green);">Art Corner<span class="tag">Classroom</span></div>
-      <div class="photo" style="background:#8a6d4a;">Number Games<span class="tag">Classroom</span></div>
-    </div>
-  </div>
-</section>
 
-<section class="section-soft">
-  <div class="container">
-    <div class="section-head left">
-      <span class="eyebrow">Active Play</span>
-      <h2>Outdoors & movement</h2>
+    <div class="carousel" id="galleryCarousel">
+      <div class="carousel-viewport">
+        <div class="carousel-track">
+          <figure class="carousel-slide">
+            <img src="assets/photos/playroom.jpg" alt="Bright, green-walled main playroom at My Little House Play School with child-size tables, chairs and reading racks" loading="lazy">
+            <figcaption>Our main playroom — open, bright and set up for play-based learning</figcaption>
+          </figure>
+          <figure class="carousel-slide">
+            <img src="assets/photos/playkitchen.jpg" alt="Pretend-play corner with wooden toy food and kitchen sets on low white shelves" loading="lazy">
+            <figcaption>The pretend-play corner, stocked with wooden play food and kitchen sets</figcaption>
+          </figure>
+          <figure class="carousel-slide">
+            <img src="assets/photos/reading.jpg" alt="Children's reading corner with a front-facing book display full of picture books" loading="lazy">
+            <figcaption>Our reading corner — picture books displayed front-facing so children can choose their own</figcaption>
+          </figure>
+          <figure class="carousel-slide">
+            <img src="assets/photos/toyshelf.jpg" alt="Open shelving with clear labelled bins of building blocks and learning materials" loading="lazy">
+            <figcaption>Learning materials in clear, labelled bins — everything at child height</figcaption>
+          </figure>
+          <figure class="carousel-slide">
+            <img src="assets/photos/sensory.jpg" alt="Quiet sensory corner with soft wall panels, tactile boards and a green play mat" loading="lazy">
+            <figcaption>A quiet sensory corner for calm-down time and one-to-one activities</figcaption>
+          </figure>
+          <figure class="carousel-slide">
+            <img src="assets/photos/kindyshelf.jpg" alt="Kindy classroom shelving with sorting toys, blocks and activity boxes" loading="lazy">
+            <figcaption>The kindy classroom — hands-on activity boxes for our 4 to 6 year olds</figcaption>
+          </figure>
+          <figure class="carousel-slide">
+            <img src="assets/photos/exterior.jpg" alt="Exterior of My Little House Play School Childcare Centre in Bintulu, Sarawak, with its pink signboard" loading="lazy">
+            <figcaption>Our home at No. 40, Grand Height, Jalan Johari Sunam, Bintulu</figcaption>
+          </figure>
+        </div>
+      </div>
+      <button class="carousel-btn prev" type="button" aria-label="Previous photo">&#8249;</button>
+      <button class="carousel-btn next" type="button" aria-label="Next photo">&#8250;</button>
+      <div class="carousel-dots" aria-hidden="true"></div>
+      <p class="carousel-hint">Tap the photo, or use the arrows, for the next one</p>
     </div>
-    <div class="grid grid-4">
-      <div class="photo" style="background:var(--green);">Playground Time<span class="tag">Outdoor</span></div>
-      <div class="photo" style="background:var(--terracotta);">Water Play<span class="tag">Outdoor</span></div>
-      <div class="photo" style="background:var(--gold); color:var(--charcoal);">Music & Dance<span class="tag" style="background:rgba(43,36,32,0.25);">Movement</span></div>
-      <div class="photo" style="background:#8a6d4a;">Sports Day<span class="tag">Outdoor</span></div>
-    </div>
-  </div>
-</section>
 
-<section class="section-cream">
-  <div class="container">
-    <div class="section-head left">
-      <span class="eyebrow">Our Community</span>
-      <h2>Celebrating Sarawak, together</h2>
-    </div>
-    <div class="grid grid-4">
-      <div class="photo" style="background:var(--terracotta);">Gawai Dayak<span class="tag">Festival</span></div>
-      <div class="photo" style="background:var(--gold); color:var(--charcoal);">Hari Raya<span class="tag" style="background:rgba(43,36,32,0.25);">Festival</span></div>
-      <div class="photo" style="background:var(--green);">Chinese New Year<span class="tag">Festival</span></div>
-      <div class="photo" style="background:#8a6d4a;">Graduation Day<span class="tag">Milestone</span></div>
-    </div>
-    <span class="badge-note">Placeholder tiles — swap in real photos from your centre before submission.</span>
+    <span class="badge-note">Photos show our facilities only. Photos that include children will be added once we have written consent from their parents.</span>
   </div>
 </section>
 
@@ -138,6 +143,32 @@
 <script>
   document.getElementById('navToggle').addEventListener('click', function () {
     document.getElementById('navlinks').classList.toggle('open');
+  });
+
+  document.querySelectorAll('.carousel').forEach(function (root) {
+    var track = root.querySelector('.carousel-track');
+    var slides = Array.prototype.slice.call(root.querySelectorAll('.carousel-slide'));
+    var dotsWrap = root.querySelector('.carousel-dots');
+    var index = 0;
+    var dots = slides.map(function (_, n) {
+      var d = document.createElement('button');
+      d.type = 'button';
+      d.setAttribute('aria-label', 'Go to photo ' + (n + 1));
+      d.addEventListener('click', function () { go(n); });
+      dotsWrap.appendChild(d);
+      return d;
+    });
+    function go(n) {
+      index = (n + slides.length) % slides.length;
+      track.style.transform = 'translateX(-' + (index * 100) + '%)';
+      dots.forEach(function (d, k) { d.classList.toggle('active', k === index); });
+    }
+    root.querySelector('.carousel-btn.prev').addEventListener('click', function () { go(index - 1); });
+    root.querySelector('.carousel-btn.next').addEventListener('click', function () { go(index + 1); });
+    slides.forEach(function (s) {
+      s.addEventListener('click', function () { go(index + 1); });
+    });
+    go(0);
   });
 </script>
 </body>

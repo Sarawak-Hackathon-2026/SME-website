@@ -139,11 +139,31 @@
       <span class="eyebrow">A Peek Inside</span>
       <h2>Life at My Little House</h2>
     </div>
-    <div class="grid grid-4">
-      <div class="photo" style="background:var(--terracotta);">Classroom Fun<span class="tag">Learning</span></div>
-      <div class="photo" style="background:var(--gold); color:var(--charcoal);">Outdoor Play<span class="tag" style="background:rgba(43,36,32,0.25);">Active</span></div>
-      <div class="photo" style="background:var(--green);">Gawai Celebration<span class="tag">Culture</span></div>
-      <div class="photo" style="background:#8a6d4a;">Art & Craft<span class="tag">Creative</span></div>
+    <div class="carousel" id="peekCarousel">
+      <div class="carousel-viewport">
+        <div class="carousel-track">
+          <figure class="carousel-slide">
+            <img src="assets/photos/playroom.jpg" alt="Bright, green-walled main playroom with child-size tables and reading racks" loading="lazy">
+            <figcaption>Our main playroom in Bintulu</figcaption>
+          </figure>
+          <figure class="carousel-slide">
+            <img src="assets/photos/playkitchen.jpg" alt="Pretend-play corner with wooden toy food and kitchen sets on low shelves" loading="lazy">
+            <figcaption>The pretend-play corner</figcaption>
+          </figure>
+          <figure class="carousel-slide">
+            <img src="assets/photos/reading.jpg" alt="Reading corner with a front-facing display full of children's picture books" loading="lazy">
+            <figcaption>Our reading corner</figcaption>
+          </figure>
+          <figure class="carousel-slide">
+            <img src="assets/photos/exterior.jpg" alt="Exterior of My Little House Play School Childcare Centre in Bintulu with its pink signboard" loading="lazy">
+            <figcaption>Our home on Jalan Johari Sunam</figcaption>
+          </figure>
+        </div>
+      </div>
+      <button class="carousel-btn prev" type="button" aria-label="Previous photo">&#8249;</button>
+      <button class="carousel-btn next" type="button" aria-label="Next photo">&#8250;</button>
+      <div class="carousel-dots" aria-hidden="true"></div>
+      <p class="carousel-hint">Tap the photo, or use the arrows, for the next one</p>
     </div>
     <div style="text-align:center; margin-top:36px;">
       <a href="gallery.html" class="btn btn-secondary">View Full Gallery</a>
@@ -205,6 +225,32 @@
 <script>
   document.getElementById('navToggle').addEventListener('click', function () {
     document.getElementById('navlinks').classList.toggle('open');
+  });
+
+  document.querySelectorAll('.carousel').forEach(function (root) {
+    var track = root.querySelector('.carousel-track');
+    var slides = Array.prototype.slice.call(root.querySelectorAll('.carousel-slide'));
+    var dotsWrap = root.querySelector('.carousel-dots');
+    var index = 0;
+    var dots = slides.map(function (_, n) {
+      var d = document.createElement('button');
+      d.type = 'button';
+      d.setAttribute('aria-label', 'Go to photo ' + (n + 1));
+      d.addEventListener('click', function () { go(n); });
+      dotsWrap.appendChild(d);
+      return d;
+    });
+    function go(n) {
+      index = (n + slides.length) % slides.length;
+      track.style.transform = 'translateX(-' + (index * 100) + '%)';
+      dots.forEach(function (d, k) { d.classList.toggle('active', k === index); });
+    }
+    root.querySelector('.carousel-btn.prev').addEventListener('click', function () { go(index - 1); });
+    root.querySelector('.carousel-btn.next').addEventListener('click', function () { go(index + 1); });
+    slides.forEach(function (s) {
+      s.addEventListener('click', function () { go(index + 1); });
+    });
+    go(0);
   });
 </script>
 </body>
