@@ -202,3 +202,55 @@ extracted into §5 and §6 above.
 6. Re-run the div-balance sanity check after any bulk edit:
    `grep -c '<div' file.html` should equal `grep -c '</div>' file.html`
    for every page (this was how the file was validated during the build).
+
+## 9. Changelog — Claude Code session, 2026-09-03
+
+This folder is now a **git repo** (`git log` for the full history, one
+commit per change so any step can be rolled back). Commits after baseline:
+
+1. **Real facility photos + carousel.** Seven child-free photos cropped
+   from the centre's own Canva collages live in `assets/photos/`
+   (playroom, playkitchen, reading, toyshelf, sensory, kindyshelf,
+   exterior). A reusable `.carousel` component (CSS in `styles.css`, JS
+   inline in `index.html` + `gallery.html`) shows **one photo at a time**
+   — prev/next arrows, dots, and tap-the-photo-to-advance.
+   - `gallery.html`: the 3 grids of placeholder colour tiles are gone,
+     replaced by one 7-photo carousel. Note left in place that photos
+     **with children** still need written parental consent (safeguarding
+     rule from §6 upheld — none were used).
+   - `index.html`: "A Peek Inside" tiles → 4-photo carousel.
+2. **Real WhatsApp / phone number.** Placeholder `60100000000` →
+   **`+60 14-887 9930`** (matches the number on the centre's signboard),
+   contact person **Ms Siti**. Applied to every `wa.me` link (with a
+   pre-filled enquiry message), the contact-page phone block, the Home
+   info-strip, and the footer Contact column on all 5 pages.
+   Still placeholder: the `mailto:` email and the enquiry form backend.
+3. **Mobile/tablet hamburger fixed** (`<=860px` only — desktop nav
+   unchanged). Full-width dropdown rows with dividers + shadow, bigger tap
+   targets, `aria-expanded` toggling, hamburger swaps to an X when open.
+   `<=480px` hides the nav CTA button so it can't collide with the brand.
+4. **SEO / AEO / GEO.** Per-page `<title>` + meta description rewritten
+   keyword-first; canonical, Open Graph, Twitter, `theme-color`, and
+   geo/ICBM tags added to every page. JSON-LD `@graph` on every page:
+   `ChildCare`/`LocalBusiness` (NAP, geo, hours, area served, age
+   audience), `WebSite`, `WebPage`, `BreadcrumbList`. `programs.html` also
+   carries a visible **FAQ accordion** (`<details>`) with matching
+   `FAQPage` schema. Added `robots.txt` (AI crawlers explicitly allowed)
+   and `sitemap.xml`. Pages now wrapped in `<main>`; `lang="en-MY"`.
+
+### ⚠ Placeholder domain — must change before launch
+
+Every canonical / `og:url` / JSON-LD `@id` / sitemap / robots URL uses
+**`https://mylittlehouseplayschool.my`** as a stand-in. Search-and-replace
+this string across `*.html`, `robots.txt` and `sitemap.xml` with the real
+deployed domain, or the OG image and canonical tags will point nowhere.
+The geo coordinates (`3.1701, 113.0417`) are an approximate Bintulu
+centre point — replace with the exact lat/long of No. 40 Grand Height.
+
+### Real fees are available but NOT on the site
+
+The client's live Canva site lists actual fees (registration RM150, misc
+RM180, food half-year RM220; monthly RM400–RM650 depending on age and
+full/half day). Per §6 these were deliberately kept off the site. The FAQ
+answer on fees currently routes people to WhatsApp. Add the real table
+only on the owner's say-so.
