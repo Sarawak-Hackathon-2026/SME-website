@@ -266,6 +266,24 @@ The 2026 public-holiday closure list from Canva page 12 (first-half dates
 only — the source is labelled "1st term 2026") is now the "2026 school
 holidays" section on `programs.html` (`#holidays`).
 
+### SEO / AEO / GEO — second pass (2026-09-04)
+
+- `robots.txt` expanded to explicitly allow the major AI/answer-engine
+  crawlers (GPTBot, ClaudeBot, anthropic-ai, PerplexityBot, CCBot,
+  Google-Extended, Applebot-Extended, Amazonbot, Bytespider,
+  Meta-ExternalAgent, cohere-ai, Diffbot, YouBot, PetalBot, …).
+- New `llms.txt` at the site root — a plain-text fact sheet (NAP,
+  programmes, fees, page map) for LLM retrieval.
+- New branded `404.html` (GitHub Pages serves it for unknown paths;
+  uses absolute `/SME-website/…` asset paths).
+- `robots` meta upgraded to
+  `index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1`.
+- JSON-LD business node (all 5 pages) gained `hasMap`, `numberOfEmployees`,
+  `employee[]` (the six named staff) and `hasOfferCatalog` (the five
+  programmes as `Service` offers). `programs.html` also carries a
+  standalone `OfferCatalog` node with the four monthly-fee `Offer`s
+  (RM 400–650, `UnitPriceSpecification`).
+
 ## 10. Changelog — Claude Code session, 2026-09-03 (evening)
 
 Source material from `Desktop/Sarawak-hackathon/Sarawak-hackathon.zip`

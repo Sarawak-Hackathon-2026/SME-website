@@ -1,0 +1,43 @@
+# My Little House Play School
+
+> A warm, play-based childcare centre in Bintulu, Sarawak, Malaysia, for children aged 3 months to 9 years. Officially registered as My Little House Playschool Childcare Centre (Taska Rumah Kecilku); operating since 2011.
+
+## Key facts
+
+- Name: My Little House Play School (registered: My Little House Playschool Childcare Centre / Taska Rumah Kecilku)
+- Location: No. 40, Grand Height, Jalan Johari Sunam, 97000 Bintulu, Sarawak, Malaysia
+- Contact: WhatsApp or call Ms Siti at +60 14-887 9930 (Monday–Friday)
+- Hours: Monday to Friday, 7:30am – 6:00pm
+- Founded: 2011. Principal & Founder: Puan Siti Fatihah Binti Mohamad (bachelor's degree in Early Childhood Education, 22 years' experience since 2004). Co-Founder: Encik Sulaiman Bin Suhaili.
+- Ages served: 3 months to 9 years
+- Approach: play-based learning (self-direction, unstructured exploration, fun, process-oriented)
+- Website: https://sarawak-hackathon-2026.github.io/SME-website/
+
+## Programmes
+
+- Infant daycare — ages 3–18 months, ratio 1 teacher : 3 babies
+- Toddler playschool — ages 18–24 months
+- Preschool — ages 3–6 years, in a 3–4 group and a 5–6 group
+- Transit care — school-age children aged 7–9, half-day around school hours
+- Inclusive programme — early-intervention activities for children with mild autism, speech delay and similar developmental needs (not a therapy service; suitability discussed individually)
+
+## Fees (2026)
+
+Monthly school fee:
+- Child aged 2 or below: full day RM 650, half day RM 450
+- Child aged 2 or above: full day RM 595, half day RM 400
+
+One-time on enrolment: registration RM 150 (first time only), miscellaneous RM 180, food RM 220 per half-year.
+
+## Pages
+
+- [Home](https://sarawak-hackathon-2026.github.io/SME-website/): overview, programmes summary, key facts
+- [About Us](https://sarawak-hackathon-2026.github.io/SME-website/about.html): story, founder, team, health & safety
+- [Programmes & Curriculum](https://sarawak-hackathon-2026.github.io/SME-website/programs.html): programme details, curriculum, sample day, 2026 school holidays, fees, FAQ
+- [Gallery](https://sarawak-hackathon-2026.github.io/SME-website/gallery.html): photos of the centre's rooms and learning spaces
+- [Contact & Visit](https://sarawak-hackathon-2026.github.io/SME-website/contact.html): enquiry form, address, map, opening hours
+
+## Notes
+
+- This is a small independent childcare centre. It has no franchise or parent organisation.
+- Some operational details (exact street address, some fee items, term-break dates for the second half of 2026) are being confirmed with the centre owner and may be refined.
