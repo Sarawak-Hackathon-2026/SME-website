@@ -40,18 +40,27 @@ Every page shares the same header/nav, footer, and `styles.css` — no
 templating engine, so header/footer edits must be applied to all 5 files by
 hand (or scripted with sed/python, which is how prior bulk edits were done).
 
-## 3. Design system (locked in, do not silently change)
+## 3. Design system
 
-**Palette — "Bornean Warmth"** (chosen deliberately over the client's
-existing purple/lavender/pink identity — see §5 for why):
+**Palette — lavender / indigo / magenta** (the centre's own brand, from
+Puan Siti's Canva site — adopted 2026-09-04 on the business owner's
+request, replacing the earlier "Bornean Warmth" green/terracotta scheme).
+Applied with proper contrast rather than a literal copy of the Canva
+(which used black text on mid-purple). The CSS token **names are kept**
+from the old palette, so the whole site re-skins from `:root` alone:
 
-| Token | Hex | Use |
+| Token | Hex | Role |
 |---|---|---|
-| `--green` | `#1F4D38` | primary brand color, headings |
-| `--terracotta` | `#C1502E` | primary CTA buttons |
-| `--gold` | `#E8A33D` | accents, eyebrow tags |
-| `--cream` | `#F7EFE1` | page background |
-| `--charcoal` | `#2B2420` | body text, footer bg |
+| `--green` | `#2B1392` | deep indigo — headings, dark panels, brand |
+| `--terracotta` | `#CE2D7C` | magenta — primary CTA buttons |
+| `--gold` | `#F0BE3C` | warm yellow — eyebrow tags, accents |
+| `--cream` | `#ECE7FF` | lavender — page background |
+| `--cream-soft` | `#E0D8F7` | soft lilac — alternating sections |
+| `--charcoal` | `#241B3D` | plum-ink — body text, footer |
+
+`.btn-whatsapp` stays WhatsApp green `#25D366` (brand colour, do not
+change). The logo artwork is unchanged; its background is the lavender
+`#E8E2FF`.
 
 **Typography**: `ADLaM Display` for headings/display text (one weight
 only), `Poppins` for body text and buttons. Both loaded via a Google Fonts

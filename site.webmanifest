@@ -5,8 +5,8 @@
   "start_url": "/SME-website/",
   "scope": "/SME-website/",
   "display": "standalone",
-  "background_color": "#F7EFE1",
-  "theme_color": "#1F4D38",
+  "background_color": "#ECE7FF",
+  "theme_color": "#2B1392",
   "icons": [
     { "src": "assets/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any maskable" },
     { "src": "assets/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }
