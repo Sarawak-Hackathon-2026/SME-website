@@ -681,6 +681,7 @@ footer.site-footer {
   border-radius: var(--radius-md);
   box-shadow: var(--shadow);
   background: var(--cream-soft);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 @media (max-width: 720px) {
   .photo-strip { grid-template-columns: repeat(2, 1fr); gap: 12px; }
@@ -701,6 +702,7 @@ footer.site-footer {
   border-radius: var(--radius-md);
   box-shadow: var(--shadow);
   background: var(--cream-soft);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 .kids-strip figcaption {
   margin-top: 8px;
@@ -816,6 +818,13 @@ footer.site-footer {
   box-shadow: 0 16px 36px rgba(36, 27, 61, 0.16);
 }
 .js-motion .grid .card:hover .icon { transform: translateY(-2px) scale(1.08) rotate(-4deg); }
+
+/* Photo rows: same lift as the cards */
+.js-motion .photo-strip img:hover,
+.js-motion .kids-strip img:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 36px rgba(36, 27, 61, 0.16);
+}
 
 /* CTA arrow nudge */
 .js-motion .btn-primary,
