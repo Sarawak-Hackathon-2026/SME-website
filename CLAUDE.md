@@ -261,7 +261,10 @@ Verified figures, now shown in the "Fees" section on `programs.html`
 Still unconfirmed with the owner (copy hedges accordingly): whether "misc"
 is one-time or recurring, whether food is compulsory, how transit care and
 the inclusive programme are priced, and any deposit / sibling discount.
-Canva page 12 also has a 2026 school-holiday calendar (not yet used).
+
+The 2026 public-holiday closure list from Canva page 12 (first-half dates
+only — the source is labelled "1st term 2026") is now the "2026 school
+holidays" section on `programs.html` (`#holidays`).
 
 ## 10. Changelog — Claude Code session, 2026-09-03 (evening)
 
