@@ -152,8 +152,11 @@ choice for the hackathon, not an oversight):
   client gives a real number.
 - **Email**: placeholder `hello@mylittlehouseplayschool.my` used in the
   contact form's `mailto:` action.
-- **Operating hours**: shown as "Mon–Fri, 7:30am – 6:00pm" — plausible but
-  unconfirmed.
+- **Operating hours**: confirmed by the business owner (2026-09-04) as
+  **Mon–Fri 6:30am–6:00pm, Sat 7:00am–1:00pm** (closed Sunday). Applied
+  site-wide: visible text on every page, `openingHoursSpecification` in the
+  JSON-LD on all 5 pages, `llms.txt`, and the contact-page meta/OG
+  descriptions.
 - **Fees**: `programs.html` has a "Curious about fees?" panel with an
   explicit placeholder note; no real figures anywhere on the site.
 - **Daily schedule**: the sample timetable on `programs.html` is generic,
