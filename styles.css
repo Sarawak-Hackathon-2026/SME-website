@@ -801,8 +801,8 @@ footer.site-footer {
 .js-motion .reveal-logo.in { opacity: 1; transform: none; }
 
 /* Floating hero logo + drifting blobs */
-.js-motion .logo-hero.in { animation: float 6s ease-in-out 1.1s infinite; }
-@keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+.js-motion .reveal-logo.in .logo-hero { animation: float 7s ease-in-out 1.15s infinite; }
+@keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
 .js-motion .hero-visual-logo .blob { animation: drift 9s ease-in-out infinite; }
 .js-motion .hero-visual-logo .blob:nth-of-type(2) { animation-duration: 12s; animation-direction: reverse; }
 @keyframes drift { 0%, 100% { transform: translate(0, 0); } 50% { transform: translate(7px, -9px); } }
