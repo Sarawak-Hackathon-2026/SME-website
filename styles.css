@@ -665,6 +665,24 @@ footer.site-footer {
   line-height: 1.5;
 }
 
+/* ---------- Photo strip (meals, etc.) ---------- */
+.photo-strip {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+.photo-strip img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow);
+  background: var(--cream-soft);
+}
+@media (max-width: 720px) {
+  .photo-strip { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+}
+
 /* ---------- Small-screen tuning ---------- */
 @media (max-width: 720px) {
   .info-strip { margin-top: 24px; }
