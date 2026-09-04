@@ -683,6 +683,31 @@ footer.site-footer {
   .photo-strip { grid-template-columns: repeat(2, 1fr); gap: 12px; }
 }
 
+/* ---------- Candid photo pair (children, faces blurred) ---------- */
+.kids-strip {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  margin-top: 8px;
+}
+.kids-strip figure { margin: 0; }
+.kids-strip img {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow);
+  background: var(--cream-soft);
+}
+.kids-strip figcaption {
+  margin-top: 8px;
+  font-size: 13.5px;
+  opacity: 0.75;
+}
+@media (max-width: 640px) {
+  .kids-strip { grid-template-columns: 1fr; gap: 16px; }
+}
+
 /* ---------- Small-screen tuning ---------- */
 @media (max-width: 720px) {
   .info-strip { margin-top: 24px; }

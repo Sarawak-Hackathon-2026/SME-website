@@ -328,5 +328,30 @@ Street address still unconfirmed — cert, licence and Canva site disagree.
 6. JSON-LD business node gains `legalName`, `foundingDate`, `founder`.
 
 Still placeholder: the `mylittlehouseplayschool.my` domain in canonical /
-OG / sitemap URLs, the approximate geo coordinates, the street address,
-operating hours, and fees.
+OG / sitemap URLs, the approximate geo coordinates, and the street
+address. (Operating hours and fees are now owner-confirmed — see §11.)
+
+## 11. Changelog — Claude Code session, 2026-09-04
+
+1. **Operating hours** updated to owner-confirmed **Mon–Fri 6:30am–6:00pm,
+   Sat 7:00am–1:00pm** (closed Sunday) — visible text on all 5 pages, the
+   `openingHoursSpecification` JSON-LD on all 5 pages (Mon–Fri opens 06:30
+   + a new Saturday block), the Programs daily-schedule first slot, the
+   Programs FAQ, the Contact meta/OG/Twitter/WebPage descriptions, and
+   `llms.txt`.
+2. **About "Our Story" rewritten** on the owner's instruction —
+   "Growing together, every day" intro plus a five-card "The Whole Child"
+   grid (Behaviour, Fine & gross motor skills, Interest in learning,
+   Routine, Speech). The registration/founding and Sarawak-community
+   paragraphs were kept.
+3. **Photos of children added to `gallery.html`** (owner request). Two
+   candid photos pulled from the client's live Canva site (page 8 "Kindy
+   Classroom" and page 9), watermark-cropped, in a new "The children at
+   play" `.kids-strip` (`assets/photos/kindy-activity.jpg`,
+   `group-time.jpg`). **Every child's face is machine-detected (OpenCV
+   YuNet) and blurred** with a feathered mosaic; the adult teacher in the
+   kindy photo is not blurred. The gallery `badge-note` now reads: "In any
+   photo that includes children, every child's face is blurred to protect
+   their identity." Blurring is a de-identification step, not a substitute
+   for the brief's written-parental-consent requirement if any child were
+   ever shown identifiably.
