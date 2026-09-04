@@ -29,8 +29,8 @@
     document.querySelectorAll(revealSelectors.join(",")).forEach(function (el) {
       el.classList.add("reveal");
     });
-    // Grids and the stats band: stagger their children
-    document.querySelectorAll(".grid, .stats").forEach(function (group) {
+    // Grids, the stats band and photo rows: stagger their children
+    document.querySelectorAll(".grid, .stats, .photo-strip, .kids-strip").forEach(function (group) {
       Array.prototype.forEach.call(group.children, function (child, i) {
         child.classList.add("reveal");
         child.style.setProperty("--reveal-delay", Math.min(i * 70, 280) + "ms");
