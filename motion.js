@@ -21,6 +21,7 @@
     ".faq details",
     ".hero-actions",
     ".day-schedule",
+    ".fee-note",
     "main > section > .container > p.lead",
     "main > section > .container > h2"
   ];
