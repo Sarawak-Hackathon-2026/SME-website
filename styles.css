@@ -585,13 +585,16 @@ footer.site-footer {
 }
 
 .badge-note {
+  display: block;
+  max-width: 560px;
   font-size: 12px;
+  line-height: 1.5;
   background: rgba(240,190,60,0.15);
   color: #3a2a63;
   border: 1px dashed var(--gold);
   border-radius: 10px;
   padding: 10px 14px;
-  margin-top: 10px;
+  margin-top: 14px;
 }
 
 /* ---------- Daily schedule table ---------- */
