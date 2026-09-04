@@ -294,7 +294,7 @@ header.site-header {
   flex: 1 1 380px;
   height: 360px;
   border-radius: var(--radius-lg);
-  background: linear-gradient(160deg, var(--cream-soft) 0%, var(--cream) 70%);
+  background: linear-gradient(160deg, var(--green) 0%, var(--green-dark) 90%);
   position: relative;
   overflow: hidden;
   display: flex;
@@ -303,14 +303,15 @@ header.site-header {
 }
 .hero-visual-logo .blob { position: absolute; border-radius: 50%; }
 .hero-visual-logo img.logo-hero {
-  width: 260px;
-  height: 260px;
+  width: 264px;
+  height: 264px;
   border-radius: 50%;
   object-fit: cover;
+  border: 16px solid var(--gold);
   position: relative;
   z-index: 2;
-  background: #fff;
-  box-shadow: 0 16px 34px rgba(43,36,32,0.2);
+  background: var(--gold);
+  box-shadow: 0 0 0 4px var(--cream), 0 18px 40px rgba(0,0,0,0.30);
 }
 @media (max-width: 500px) {
   .hero-visual-logo img.logo-hero { width: 190px; height: 190px; }
